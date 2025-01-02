@@ -1,6 +1,6 @@
 {
     "presentacion": {
-        "hola": "Hello world!",
+        "hola": "Hello world {{nombre}}!",
         "puesto": "Full Stack Web Developer"
     }
 }

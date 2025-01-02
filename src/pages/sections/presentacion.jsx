@@ -4,7 +4,7 @@ import Avatar from "../../assets/avatar.webp";
 import { useTranslation } from "react-i18next";
 
 function Presentecion() {
-    const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation("translation", { keyPrefix: "presentacion" });
 
     const changeLanguage = (idi) => {
         i18n.changeLanguage(idi);
@@ -16,9 +16,9 @@ function Presentecion() {
         <section className="section__content presentacion">
             <div className="container__nombre">
                 <h1>Joan González.</h1>
-                <h2>{t("presentacion.puesto")}</h2>
-                <p>{t("presentacion.hola")}</p>
-                <select onChange={(e) => onChange(e.target.value)}>
+                <h2>{t("puesto")}</h2>
+                <p>{t("hola", { nombre: "Joan" })}</p>
+                <select onChange={(e) => onChange(e.target.value)} value={i18n.language}>
                     <option value="es">España</option>
                     <option value="en">Ingles</option>
                 </select>
