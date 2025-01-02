@@ -1,0 +1,42 @@
+header {
+    position: fixed;
+    top: 10px;
+    width: 100%;
+}
+
+header button {
+    cursor: pointer;
+    border: none;
+    height: 25px;
+    width: 25px;
+    border: solid 2px black;
+    background-color: black;
+    rotate: 0deg; /* Asegúrate de inicializar la rotación */
+    transition: background-color 500ms, rotate 500ms;
+    /* rotate: 45deg; */
+}
+
+header button.active {
+    background-color: white;
+    rotate: 45deg;
+    transition: background-color 500ms, rotate 500ms;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header ul li {
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    header {
+        display: none;
+    }
+}

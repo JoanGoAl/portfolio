@@ -1,0 +1,43 @@
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+#section1 {
+    background-color: #3498db;
+    color: white;
+}
+
+#section2 {
+    background-color: #2ecc71;
+    color: white;
+}
+
+#section3 {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#section4 {
+    background-color: #f1c40f;
+    color: black;
+}
+
+#section5 {
+    background-color: #8e44ad;
+    color: white;
+}
+
+html {
+    overflow-y: scroll; /* Asegura que el scroll funcione */
+    scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+    -ms-overflow-style: none; /* Oculta la barra de scroll en IE/Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Oculta la barra de scroll en navegadores basados en WebKit */
+}
