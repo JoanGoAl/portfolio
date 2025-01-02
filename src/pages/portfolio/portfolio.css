@@ -1,43 +1,45 @@
+:root {
+    --color-one: #ebe5de;
+    --color-two: #aa7b48;
+
+    --color-title: #2667ff;
+
+    --botton-color: #363732;
+}
+
+.main__portfolio {
+    position: relative;
+}
+
+.container__portfolio .section:nth-child(even) {
+    background-color: var(--color-one);
+    color: var(--color-two);
+}
+
+.container__portfolio .section:nth-child(odd) {
+    background-color: var(--color-two);
+    color: var(--color-one);
+}
+
 .section {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #f0f0f0;
 }
 
-#section1 {
-    background-color: #3498db;
-    color: white;
-}
-
-#section2 {
-    background-color: #2ecc71;
-    color: white;
-}
-
-#section3 {
-    background-color: #e74c3c;
-    color: white;
-}
-
-#section4 {
-    background-color: #f1c40f;
-    color: black;
-}
-
-#section5 {
-    background-color: #8e44ad;
-    color: white;
+.section__content {
+    width: 100%;
+    height: 100%;
 }
 
 html {
-    overflow-y: scroll; /* Asegura que el scroll funcione */
-    scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
-    -ms-overflow-style: none; /* Oculta la barra de scroll en IE/Edge */
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 html::-webkit-scrollbar {
-    display: none; /* Oculta la barra de scroll en navegadores basados en WebKit */
+    display: none;
 }

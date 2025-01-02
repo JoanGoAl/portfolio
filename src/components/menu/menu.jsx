@@ -1,11 +1,11 @@
 import React from "react";
 import "./header.css";
 
-function Header({ sections, currentSection, setPage }) {
+function Menu({ sections, currentSection, setPage }) {
     return (
-        <header className={"header" + (currentSection + 1)}>
+        <div className="header">
             <ul>
-                {sections.map((section, index) => {
+                {sections.map((_, index) => {
                     return (
                         <li key={index}>
                             <button
@@ -16,8 +16,8 @@ function Header({ sections, currentSection, setPage }) {
                     );
                 })}
             </ul>
-        </header>
+        </div>
     );
 }
 
-export default Header;
+export default Menu;

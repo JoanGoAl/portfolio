@@ -1,32 +1,32 @@
 import { useEffect, useState } from "react";
-import Section1 from "../sections/section1";
+import Presentecion from "../sections/presentacion";
 import "./portfolio.css";
-import Header from "../../components/header/header";
+import Header from "../../components/menu/menu";
 
 const sections = [
     {
-        id: "section1",
-        children: <Section1 index={1} />,
-        name: "Seccion 1",
+        id: "presentacion",
+        children: <Presentecion />,
+        name: "Presenteción",
     },
     {
         id: "section2",
-        children: <Section1 index={2} />,
+        children: <div>Seccion 2</div>,
         name: "Seccion 2",
     },
     {
         id: "section3",
-        children: <Section1 index={3} />,
+        children: <div>Seccion 3</div>,
         name: "Seccion 3",
     },
     {
         id: "section4",
-        children: <Section1 index={4} />,
+        children: <div>Seccion 4</div>,
         name: "Seccion 4",
     },
     {
         id: "section5",
-        children: <Section1 index={5} />,
+        children: <div>Seccion 5</div>,
         name: "Seccion 5",
     },
 ];
@@ -48,7 +48,7 @@ function Portfolio() {
             }
 
             // Desbloquea el scroll después de un pequeño retraso
-            setTimeout(() => setIsScrolling(false), 800);
+            setTimeout(() => setIsScrolling(false), 650);
         };
 
         window.addEventListener("wheel", handleScroll);
@@ -59,6 +59,7 @@ function Portfolio() {
     useEffect(() => {
         const section = document.getElementById(sections[currentSection].id);
         if (section) {
+            // document.title = sections[currentSection].name;
             section.scrollIntoView({ behavior: "smooth" });
         }
     }, [currentSection]);
@@ -68,13 +69,15 @@ function Portfolio() {
     };
 
     return (
-        <div className="container__portfolio">
+        <div className="main__portfolio">
             <Header sections={sections} currentSection={currentSection} setPage={setPage} />
-            {sections.map((section, index) => (
-                <div key={index} id={section.id} className="section">
-                    {section.children}
-                </div>
-            ))}
+            <div className="container__portfolio">
+                {sections.map((section, index) => (
+                    <div key={index} id={section.id} className="section">
+                        {section.children}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
