@@ -1,32 +1,20 @@
-:root {
-    --color-one: #ebe5de;
-    --color-two: #aa7b48;
-
-    --color-title: #2667ff;
-
-    --botton-color: #363732;
-}
-
 .main__portfolio {
     position: relative;
 }
 
-.container__portfolio .section:nth-child(even) {
+.container__portfolio .section {
     background-color: var(--color-one);
     color: var(--color-two);
 }
 
-.container__portfolio .section:nth-child(odd) {
-    background-color: var(--color-two);
-    color: var(--color-one);
-}
-
 .section {
-    height: 100vh;
+    overflow: hidden;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 25px;
 }
 
 .section__content {
@@ -34,7 +22,13 @@
     height: 100%;
 }
 
-html {
+@media (max-width: 1024px) {
+    .section {
+        padding: 10px;
+    }
+}
+
+/* html {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -42,4 +36,4 @@ html {
 
 html::-webkit-scrollbar {
     display: none;
-}
+} */

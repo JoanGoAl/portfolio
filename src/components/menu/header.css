@@ -12,8 +12,8 @@
     height: 12px;
     width: 12px;
     padding: 0;
-    border: solid 2px var(--botton-color);
-    background-color: var(--botton-color);
+    border: solid 2px var(--background-color);
+    background-color: var(--background-color);
     rotate: 0deg; /* Asegúrate de inicializar la rotación */
     transition: background-color 500ms, rotate 500ms;
     /* rotate: 45deg; */

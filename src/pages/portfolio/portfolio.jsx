@@ -35,26 +35,26 @@ function Portfolio() {
     const [currentSection, setCurrentSection] = useState(0);
     const [isScrolling, setIsScrolling] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = (event) => {
-            if (isScrolling) return;
+    // useEffect(() => {
+    //     const handleScroll = (event) => {
+    //         if (isScrolling) return;
 
-            if (event.deltaY > 0 && currentSection < sections.length - 1) {
-                setCurrentSection((prev) => prev + 1);
-                setIsScrolling(true);
-            } else if (event.deltaY < 0 && currentSection > 0) {
-                setCurrentSection((prev) => prev - 1);
-                setIsScrolling(true);
-            }
+    //         if (event.deltaY > 0 && currentSection < sections.length - 1) {
+    //             setCurrentSection((prev) => prev + 1);
+    //             setIsScrolling(true);
+    //         } else if (event.deltaY < 0 && currentSection > 0) {
+    //             setCurrentSection((prev) => prev - 1);
+    //             setIsScrolling(true);
+    //         }
 
-            // Desbloquea el scroll después de un pequeño retraso
-            setTimeout(() => setIsScrolling(false), 650);
-        };
+    //         // Desbloquea el scroll después de un pequeño retraso
+    //         setTimeout(() => setIsScrolling(false), 650);
+    //     };
 
-        window.addEventListener("wheel", handleScroll);
+    //     window.addEventListener("wheel", handleScroll);
 
-        return () => window.removeEventListener("wheel", handleScroll);
-    }, [currentSection, isScrolling, sections]);
+    //     return () => window.removeEventListener("wheel", handleScroll);
+    // }, [currentSection, isScrolling, sections]);
 
     useEffect(() => {
         const section = document.getElementById(sections[currentSection].id);
