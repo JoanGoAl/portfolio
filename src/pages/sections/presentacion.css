@@ -63,8 +63,24 @@
     background-color: var(--background-color);
     display: grid;
     row-gap: 10px;
-    padding: 10px 0;
+    padding: 10px;
 }
+
+.info__contact > div {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
+}
+
+.info__contact a {
+    text-decoration: none;
+    color: var(--color-one);
+}
+
+/* .info__contact > div > svg {
+    stroke: var(--color-one);
+} */
 
 .ilikeit {
     display: flex;

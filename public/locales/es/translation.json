@@ -1,6 +1,12 @@
 {
     "presentacion": {
         "hola": "Hola Mundo {{nombre}}!",
-        "puesto": "Desarrollador Web Full Stack"
+        "puesto": "Desarrollador Web Full Stack",
+        "Me gusta": "Me gusta",
+        "mg": {
+            "1": "Trabajar en equipo",
+            "2": "Aprender cosas nuevas",
+            "3": "Resolver problemas"
+        }
     }
 }
