@@ -30,6 +30,11 @@
     /* display: inline-block; */
 }
 
+.container__nombre select {
+    position: absolute;
+    z-index: 2;
+}
+
 .div1 {
     /* height: 600px; */
     grid-template-rows: 1fr auto;
@@ -183,6 +188,7 @@
     }
 
     .container__foto {
+        font-size: 0.8em;
         width: 100%;
     }
 
