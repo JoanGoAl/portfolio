@@ -1,11 +1,13 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #434242;
+
+  --primary-color: red;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #434242;
     --foreground: #ededed;
   }
 }
@@ -13,7 +15,11 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+}
+
+.primary-color {
+  color: var(--primary-color);
 }
 
 body {
