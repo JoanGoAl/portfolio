@@ -1,7 +1,7 @@
 FROM node:23-alpine AS deps
 WORKDIR /app
 COPY package.json ./
-RUN npm install --omit-dev
+RUN npm install --omit-dev --legacy-peer-deps
 
 # Rebuild the source code only when needed
 FROM node:23-alpine AS builder
