@@ -8,6 +8,7 @@ export default function TypeWriter({ strings }: { strings: string[] }) {
             strings,
             autoStart: true,
             loop: true,
+            deleteSpeed: 50
         }}
     />
 }

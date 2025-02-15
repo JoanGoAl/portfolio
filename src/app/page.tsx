@@ -7,7 +7,7 @@ export default function Home() {
       <div className={styles.saludos_container}>
         <div className={styles.saludos}>
           <h1>HI THERE</h1>
-          <TypeWriter strings={["Hola mundo!!!", "Joan González Albert"]} />
+          <TypeWriter strings={["Full Stack Developer", "Work as a team", "Learn new things"]} />
         </div>
         <div>b</div>
       </div>

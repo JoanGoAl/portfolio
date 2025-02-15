@@ -47,7 +47,6 @@ export default function NavBar() {
         return () => window.removeEventListener("scroll", scrollHandler)
     }, [])
 
-
     return (
         <nav className={`${style.nav} ${navColour ? style.nav_scrolled : ""}`}>
             <div></div>
@@ -63,7 +62,7 @@ export default function NavBar() {
                                 <RxCross2 onClick={() => updateExpanded(false)} />
                             </Icon>
                             {pages.map((page: PagesType, index: number) => {
-                                return <Link href={page.href} key={"link-" + index}>{page.name}</Link>
+                                return <Link href={page.href} onClick={() => updateExpanded(false)} key={"link-" + index}>{page.name}</Link>
                             })}
                         </div>
                     </div>
