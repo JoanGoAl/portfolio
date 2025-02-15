@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import style from "./navbar.module.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Icon from "../icon/Icon";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
@@ -30,20 +30,26 @@ const pages: PagesType[] = [
 ]
 
 export default function NavBar() {
-    const [expand, updateExpanded] = useState(false);
-    const [navColour, updateNavbar] = useState(false);
+    const [expand, updateExpanded] = useState<boolean>(false);
+    const [navColour, updateNavbar] = useState<boolean>(false);
 
-    function scrollHandler() {
-        if (window.scrollY >= 20) {
-            updateNavbar(true);
-        } else {
-            updateNavbar(false);
+    useEffect(() => {
+        function scrollHandler() {
+            if (window.scrollY >= 20) {
+                updateNavbar(true);
+            } else {
+                updateNavbar(false);
+            }
         }
-    }
 
-    window.addEventListener("scroll", scrollHandler);
+        window.addEventListener("scroll", scrollHandler);
+
+        return () => window.removeEventListener("scroll", scrollHandler)
+    }, [])
+
+
     return (
-        <nav className={`${style.nav} `}>
+        <nav className={`${style.nav} ${navColour ? style.nav_scrolled : ""}`}>
             <div></div>
             <div className={style.container_links}>
                 <div className={style.container__collapsed}>
