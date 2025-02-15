@@ -1,6 +1,6 @@
 
 export default function Resume() {
     return <section>
-        resume
+        CV
     </section>
 }
