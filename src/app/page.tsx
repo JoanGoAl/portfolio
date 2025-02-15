@@ -1,14 +1,16 @@
-// import Image from "next/image";
-import styles from "./page.module.css";
+import TypeWriter from "@/components/typewriter/Typewriter";
+import styles from "./home.module.css"
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <div className={styles.page}>
-        <main className={styles.main}>
-          main
-        </main>
+    <section>
+      <div className={styles.saludos_container}>
+        <div className={styles.saludos}>
+          <h1>HI THERE</h1>
+          <TypeWriter strings={["Hola mundo!!!", "Joan González Albert"]} />
+        </div>
+        <div>b</div>
       </div>
-    </div>
+    </section>
   );
 }

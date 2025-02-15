@@ -35,9 +35,13 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <NavBar />
-
-        {children}
-
+        <div className={styles.container}>
+          <div className={styles.page}>
+            <main className={styles.main}>
+              {children}
+            </main>
+          </div>
+        </div>
         <footer className={styles.footer}>
           Joan González Albert
         </footer>
