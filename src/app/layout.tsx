@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/navbar/NavBar";
+import styles from "./page.module.css"
 // import { IconContext } from "react-icons";
 
 const geistSans = Geist({
@@ -25,8 +27,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <NavBar />
+
         {children}
+
+        <footer className={styles.footer}>
+          Joan González Albert
+        </footer>
       </body>
     </html>
   );

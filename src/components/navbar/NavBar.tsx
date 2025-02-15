@@ -53,22 +53,20 @@ export default function NavBar() {
             <div></div>
             <div className={style.container_links}>
                 <div className={style.container__collapsed}>
-                    {
-                        expand ? <>
+                    <Icon>
+                        <AiOutlineMenu onClick={() => updateExpanded(true)} />
+                    </Icon>
+
+                    <div className={`${style.lateral_nav} ${expand ? style.show_lateral_nav : ""}`}>
+                        <div className={style.links_collapsed}>
                             <Icon>
                                 <RxCross2 onClick={() => updateExpanded(false)} />
                             </Icon>
-                            <div className={style.links_collapsed}>
-                                {pages.map((page: PagesType, index: number) => {
-                                    return <Link href={page.href} key={"link-" + index}>{page.name}</Link>
-                                })}
-                            </div>
-                        </> : <Icon>
-                            <AiOutlineMenu onClick={() => updateExpanded(true)} />
-                        </Icon>
-                    }
-
-
+                            {pages.map((page: PagesType, index: number) => {
+                                return <Link href={page.href} key={"link-" + index}>{page.name}</Link>
+                            })}
+                        </div>
+                    </div>
                 </div>
                 <div className={style.link__full_screen}>
                     {pages.map((page: PagesType, index: number) => {
