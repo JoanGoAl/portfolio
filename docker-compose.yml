@@ -22,3 +22,8 @@ services:
     volumes:
       - ./public:/app/public
     restart: always
+
+networks:
+  proxy:
+    external: true
+  internal:
