@@ -5,15 +5,25 @@
   --background: #434242;
   --foreground: #ededed;
 
-  --primary-color: red;
+  --primary-color: #4A90E2;
+  /* O usa #00CFFD si prefieres más intensidad */
+
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #434242;
     --foreground: #ededed;
   }
-}
+} */
+
+/* body {
+  background: linear-gradient(135deg, #0a0f1e 10%, #04080f 90%);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+} */
 
 html,
 body {

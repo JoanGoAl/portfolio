@@ -5,11 +5,12 @@ import { useEffect, useState } from "react";
 import Icon from "../icon/Icon";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
-
-interface PagesType {
+import NavLinks from "./NavLinks";
+export interface PagesType {
     name: string,
     href: string,
-    icon?: React.ReactNode
+    icon?: React.ReactNode,
+    onClick?: () => void
 }
 
 const pages: PagesType[] = [
@@ -30,26 +31,12 @@ const pages: PagesType[] = [
 ]
 
 export default function NavBar() {
+
     const [expand, updateExpanded] = useState<boolean>(false);
-    const [navColour, updateNavbar] = useState<boolean>(false);
-
-    useEffect(() => {
-        function scrollHandler() {
-            if (window.scrollY >= 20) {
-                updateNavbar(true);
-            } else {
-                updateNavbar(false);
-            }
-        }
-
-        window.addEventListener("scroll", scrollHandler);
-
-        return () => window.removeEventListener("scroll", scrollHandler)
-    }, [])
 
     return (
-        <nav className={`${style.nav} ${navColour ? style.nav_scrolled : ""}`}>
-            <div></div>
+        <nav className={`${style.nav}`}>
+            <div>{"currentPage"}</div>
             <div className={style.container_links}>
                 <div className={style.container__collapsed}>
                     <Icon>
@@ -62,15 +49,17 @@ export default function NavBar() {
                                 <RxCross2 onClick={() => updateExpanded(false)} />
                             </Icon>
                             {pages.map((page: PagesType, index: number) => {
-                                return <Link href={page.href} onClick={() => updateExpanded(false)} key={"link-" + index}>{page.name}</Link>
+                                return <NavLinks href={page.href} name={page.name} onClick={() => updateExpanded(false)} key={"link-" + index} />
                             })}
                         </div>
                     </div>
                 </div>
                 <div className={style.link__full_screen}>
-                    {pages.map((page: PagesType, index: number) => {
-                        return <Link href={page.href} key={"link-" + index}>{page.name}</Link>
-                    })}
+                    <ul>
+                        {pages.map((page: PagesType, index: number) => {
+                            return <NavLinks href={page.href} name={page.name} onClick={() => updateExpanded(false)} key={"link-" + index} />
+                        })}
+                    </ul>
                 </div>
             </div>
         </nav>

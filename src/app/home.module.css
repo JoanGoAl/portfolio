@@ -5,6 +5,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-content: center;
+
+    font-size: 25px;
 }
 
-.saludos {}
+.destacar {
+    color: var(--primary-color);
+}

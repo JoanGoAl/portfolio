@@ -7,10 +7,13 @@ export default function Home() {
       <div className={styles.saludos_container}>
         <div className={styles.saludos}>
           <h1>HI THERE</h1>
-          <TypeWriter strings={["Full Stack Developer", "Work as a team", "Learn new things"]} />
+          <div className={styles.destacar}>
+            <TypeWriter strings={["Full Stack Developer", "Work as a team", "Learn new things"]} />
+          </div>
         </div>
         <div>b</div>
       </div>
+      <div style={{ width: "50px", height: "500px" }}></div>
     </section>
   );
 }
