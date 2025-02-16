@@ -1,7 +1,6 @@
 "use client"
-import Link from "next/link"
 import style from "./navbar.module.css"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Icon from "../icon/Icon";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
