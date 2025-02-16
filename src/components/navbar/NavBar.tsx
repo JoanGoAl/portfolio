@@ -4,13 +4,7 @@ import { useState } from "react";
 import Icon from "../icon/Icon";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
-import NavLinks from "./NavLinks";
-export interface PagesType {
-    name: string,
-    href: string,
-    icon?: React.ReactNode,
-    onClick?: () => void
-}
+import NavLinks, { PagesType } from "./NavLinks";
 
 const pages: PagesType[] = [
     {
@@ -35,7 +29,7 @@ export default function NavBar() {
 
     return (
         <nav className={`${style.nav}`}>
-            <div>{"currentPage"}</div>
+            <div></div>
             <div className={style.container_links}>
                 <div className={style.container__collapsed}>
                     <Icon>
@@ -47,9 +41,11 @@ export default function NavBar() {
                             <Icon>
                                 <RxCross2 onClick={() => updateExpanded(false)} />
                             </Icon>
-                            {pages.map((page: PagesType, index: number) => {
-                                return <NavLinks href={page.href} name={page.name} onClick={() => updateExpanded(false)} key={"link-" + index} />
-                            })}
+                            <ul>
+                                {pages.map((page: PagesType, index: number) => {
+                                    return <NavLinks href={page.href} name={page.name} onClick={() => updateExpanded(false)} key={"link-" + index} />
+                                })}
+                            </ul>
                         </div>
                     </div>
                 </div>
