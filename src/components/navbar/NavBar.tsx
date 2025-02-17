@@ -4,7 +4,8 @@ import { useState } from "react";
 import Icon from "../icon/Icon";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
-import NavLinks, { PagesType } from "./NavLinks";
+import NavLinks from "./NavLinks";
+import { PagesType } from "@/types";
 
 const pages: PagesType[] = [
     {

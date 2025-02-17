@@ -16,8 +16,8 @@
 
 @keyframes reduce-header {
     to {
-        box-shadow: 0 5px 50px -5px #ffffff1a, 0 0 0 1px #ffffff1a;
-        background: #0000004d;
+        box-shadow: 0 4px 50px -4px #ffffff15, 0 0 0 1px #ffffff15;
+        background: var(--backgroud-color);
         padding-block: 1rem;
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px)

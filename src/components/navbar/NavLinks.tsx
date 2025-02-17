@@ -1,13 +1,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./navbar.module.css"
-
-export interface PagesType {
-    name: string,
-    href: string,
-    icon?: React.ReactNode,
-    onClick?: () => void
-}
+import { PagesType } from "@/types";
 
 export default function NavLinks({ href, name, onClick }: PagesType) {
     const actual = usePathname()
