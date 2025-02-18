@@ -5,9 +5,10 @@
   --background: #434242;
   --foreground: #ededed;
 
-  --primary-color: #4A90E2;
+  --primary-color: rgb(0 153 255 / 1);
   /* O usa #00CFFD si prefieres más intensidad */
-
+  --border-radius-buttons: 10px;
+  --padding-buttons: 10px 20px;
 }
 
 /* @media (prefers-color-scheme: dark) {

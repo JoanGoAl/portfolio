@@ -124,9 +124,9 @@
 }
 
 .nav_links_container a {
-    padding: 10px 20px;
+    padding: var(--padding-buttons);
     border: 1px solid transparent;
-    border-radius: 10px;
+    border-radius: var(--border-radius-buttons);
 }
 
 .nav_links_container a:hover {

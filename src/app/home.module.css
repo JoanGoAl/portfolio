@@ -35,7 +35,7 @@
     }
 
     .container__photo__compare {
-        width: calc(100% - 50px);
+        width: 100%;
     }
 
     .saludos_container {
@@ -45,4 +45,12 @@
     .saludos {
         justify-self: center;
     }
+}
+
+.social_media_container {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 10px;
+
 }
