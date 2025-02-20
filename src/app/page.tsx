@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FaInstagram } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
+import { FaGoogleDrive } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -30,6 +31,13 @@ export default function Home() {
             </Link>
             <Link target="_blank" href={"https://github.com/JoanGoAl"}>
               <FaGithub />
+            </Link>
+
+            <Link target="_blank" href={"https://drive.google.com/drive/folders/1WHAd1M_udQUyXaPENOGhXwSbxsj2AuVi?usp=drive_link"}>
+              <FaGoogleDrive />
+            </Link>
+            <Link target="_blank" href={"https://drive.google.com/drive/folders/1F_wnElwAmUNlD_LS7CMJ_nhlatKs4iA_?usp=drive_link"}>
+              <FaGoogleDrive />
             </Link>
           </div>
         </div>
