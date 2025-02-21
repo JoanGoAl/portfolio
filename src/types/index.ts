@@ -8,6 +8,11 @@ export interface PagesType {
     onClick?: () => void
 }
 
+export interface LinkType {
+    href: string,
+    icon: React.ReactElement
+}
+
 export interface LinkButtonType extends LinkProps {
 
     /**

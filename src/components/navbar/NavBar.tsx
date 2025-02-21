@@ -8,7 +8,6 @@ import NavLinks from "./NavLinks";
 import { PagesType } from "@/types";
 
 import { VscHome } from "react-icons/vsc";
-import { FaRegUser } from "react-icons/fa";
 import { PiCodeBold } from "react-icons/pi";
 import { PiReadCvLogoLight } from "react-icons/pi";
 
@@ -19,14 +18,11 @@ const pages: PagesType[] = [
         icon: <VscHome />
     },
     {
-        name: "About",
-        href: "/about",
-        icon: <FaRegUser />
-    }, {
         name: "Projects",
         href: "/projects",
         icon: <PiCodeBold />
-    }, {
+    },
+    {
         name: "Resume",
         href: "/resume",
         icon: <PiReadCvLogoLight />

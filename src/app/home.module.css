@@ -1,6 +1,6 @@
 .saludos_container {
     width: 100%;
-    height: 80dvh;
+    min-height: 80dvh;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
